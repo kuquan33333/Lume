@@ -13,6 +13,13 @@ import SwiftUI
 extension PremiumManager {
     /// Which plan is unlocking Premium — the headline of the plan details.
     var planTitle: String {
+        #if PRO_TEST
+            if let testPurchasedPlan {
+                return testPurchasedPlan == .monthly
+                    ? String(localized: "Monthly (Test)")
+                    : String(localized: "Lifetime (Test)")
+            }
+        #endif
         #if !SIDE_LOAD
             // A lifetime unlock outranks a subscription: it can't lapse, so that's the
             // more useful thing to show if someone somehow holds both. The retired
@@ -92,6 +99,12 @@ extension SettingsView {
                     if premium.hasManageableSubscription {
                         ManageSubscriptionRow()
                     }
+                    #if PRO_TEST
+                        Button("Reset Pro Test to Free") { premium.resetTestPlan() }
+                        Text("Test build only — no Apple transaction was created.")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    #endif
                 }
 
                 Section {
@@ -203,6 +216,12 @@ extension SettingsView {
                     ManageSubscriptionRow()
                         .padding(.horizontal, TVSettingsMetrics.rowHPadding)
                 }
+                #if PRO_TEST
+                    if premium.isPremium {
+                        Button("Reset Pro Test to Free") { premium.resetTestPlan() }
+                            .buttonStyle(TVSettingsRowButtonStyle())
+                    }
+                #endif
 
                 if !premium.isPremium {
                     Button {
@@ -218,7 +237,11 @@ extension SettingsView {
                     .buttonStyle(TVSettingsRowButtonStyle())
 
                     Button {
-                        Task { await premium.restore() }
+                        #if PRO_TEST
+                            premium.restoreTestPlan()
+                        #else
+                            Task { await premium.restore() }
+                        #endif
                     } label: {
                         HStack(spacing: 16) {
                             Image(systemName: "arrow.clockwise")
