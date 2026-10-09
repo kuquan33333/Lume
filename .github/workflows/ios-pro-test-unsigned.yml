@@ -10,6 +10,11 @@ on:
       - feat/vi-localization-pro-test-codemagic
     paths:
       - .github/workflows/ios-pro-test-unsigned.yml
+      - Lume.xcodeproj/project.pbxproj
+      - Lume/Views/Premium/**
+      - Lume/Services/Premium/**
+      - Lume/Localizable.xcstrings
+      - Scripts/check-vi-localization.swift
   workflow_dispatch:
 
 permissions:
@@ -97,16 +102,19 @@ jobs:
           set -euo pipefail
           xcodebuild -downloadComponent MetalToolchain
 
+      # This dedicated Xcode configuration adds PRO_TEST only to our project.
+      # Do not override SWIFT_ACTIVE_COMPILATION_CONDITIONS on the command
+      # line: it suppresses SwiftPM's SWIFT_PACKAGE in KSPlayer and creates
+      # duplicate Bundle.module declarations.
       - name: Archive unsigned iPhoneOS app with isolated Pro Test
         run: |
           set -euo pipefail
           xcodebuild archive \
             -project Lume.xcodeproj \
             -scheme Lume \
-            -configuration Sideload \
+            -configuration ProTest \
             -destination 'generic/platform=iOS' \
             -archivePath "$RUNNER_TEMP/Lume-ProTest.xcarchive" \
-            "SWIFT_ACTIVE_COMPILATION_CONDITIONS=SIDE_LOAD PRO_TEST" \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
