@@ -69,7 +69,34 @@ final class PremiumManager {
     /// True while a purchase or restore is in flight, for button spinners.
     private(set) var isWorking = false
 
-    #if SIDE_LOAD
+    #if PRO_TEST
+        /// QA-only sideload purchase simulation. Never calls Apple payment APIs.
+        private static let testPlanKey = "lume.proTest.selectedPlan"
+
+        private(set) var testPurchasedPlan: Plan? = UserDefaults.standard
+            .string(forKey: PremiumManager.testPlanKey)
+            .flatMap(Plan.init(rawValue:))
+
+        var isPremium: Bool { testPurchasedPlan != nil }
+
+        func purchaseTestPlan(_ plan: Plan) {
+            guard Plan.purchasable.contains(plan) else { return }
+            UserDefaults.standard.set(plan.rawValue, forKey: Self.testPlanKey)
+            testPurchasedPlan = plan
+        }
+
+        func restoreTestPlan() {
+            testPurchasedPlan = UserDefaults.standard
+                .string(forKey: Self.testPlanKey)
+                .flatMap(Plan.init(rawValue:))
+        }
+
+        func resetTestPlan() {
+            UserDefaults.standard.removeObject(forKey: Self.testPlanKey)
+            testPurchasedPlan = nil
+        }
+
+    #elseif SIDE_LOAD
         /// Sideloaded / self-compiled builds unlock everything. No StoreKit, no
         /// paywall — this is the open-source promise.
         var isPremium: Bool {
