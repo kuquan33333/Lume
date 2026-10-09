@@ -1,0 +1,52 @@
+# Unsigned physical-iPhone IPA. Sideloadly signs it on the user's computer.
+# No paid Apple Developer account or certificates in Codemagic.
+workflows:
+  ios-sideload-pro-test:
+    name: iOS Pro Test - Unsigned IPA for Sideloadly
+    max_build_duration: 120
+    instance_type: mac_mini_m2
+    environment:
+      xcode: latest
+      vars:
+        ENGINE_REF: v0.3.2
+        RECORDER_REF: v0.1.1
+    scripts:
+      - name: Checkout required local Swift packages
+        script: |
+          set -euo pipefail
+          git clone --depth 1 --branch "$ENGINE_REF" https://github.com/bilipp/LumeEngine.git "$CM_BUILD_DIR/../LumeEngine"
+          git clone --depth 1 --branch "$RECORDER_REF" https://github.com/bilipp/LumeRecorder.git "$CM_BUILD_DIR/../LumeRecorder"
+          test -f "$CM_BUILD_DIR/../LumeEngine/Package.swift"
+          test -f "$CM_BUILD_DIR/../LumeRecorder/Kit/Package.swift"
+      - name: Install Metal Toolchain for KSPlayer shaders
+        script: |
+          set -euo pipefail
+          xcodebuild -downloadComponent MetalToolchain
+      - name: Archive unsigned app for a real iPhone
+        script: |
+          set -euo pipefail
+          mkdir -p "$CM_BUILD_DIR/build"
+          xcodebuild archive \
+            -project "$CM_BUILD_DIR/Lume.xcodeproj" \
+            -scheme Lume \
+            -configuration Sideload \
+            -destination 'generic/platform=iOS' \
+            -archivePath "$CM_BUILD_DIR/build/Lume-ProTest.xcarchive" \
+            "SWIFT_ACTIVE_COMPILATION_CONDITIONS=SIDE_LOAD PRO_TEST" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            ENABLE_HARDENED_RUNTIME=NO
+      - name: Wrap unsigned device app as IPA for Sideloadly
+        script: |
+          set -euo pipefail
+          APP="$CM_BUILD_DIR/build/Lume-ProTest.xcarchive/Products/Applications/Lume.app"
+          test -d "$APP" || { echo "Missing iPhone Lume.app"; exit 1; }
+          mkdir -p "$CM_BUILD_DIR/build/unsigned/Payload"
+          ditto "$APP" "$CM_BUILD_DIR/build/unsigned/Payload/Lume.app"
+          cd "$CM_BUILD_DIR/build/unsigned"
+          zip -qry "$CM_BUILD_DIR/build/Lume-iOS-ProTest-unsigned.ipa" Payload
+          unzip -l "$CM_BUILD_DIR/build/Lume-iOS-ProTest-unsigned.ipa" | grep 'Payload/Lume.app/'
+    artifacts:
+      - build/Lume-iOS-ProTest-unsigned.ipa
+      - /tmp/xcodebuild_logs/*.log
