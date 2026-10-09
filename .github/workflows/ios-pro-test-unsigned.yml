@@ -1,0 +1,146 @@
+name: Lume iOS Pro Test - Unsigned IPA (Sideloadly)
+
+# GitHub requires workflow_dispatch workflows on the default branch.
+# Since this feature lives on its own branch, the one-time push of this file
+# triggers an initial build without touching main. For subsequent builds use
+# "Re-run all jobs", or dispatch manually after the workflow reaches main.
+on:
+  push:
+    branches:
+      - feat/vi-localization-pro-test-codemagic
+    paths:
+      - .github/workflows/ios-pro-test-unsigned.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lume-ios-pro-test-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  unsigned-iphone-ipa:
+    name: Build iPhone IPA (Vietnamese + Free Pro Test)
+    runs-on: macos-26
+    timeout-minutes: 120
+    env:
+      ENGINE_REF: v0.3.2
+      RECORDER_REF: v0.1.1
+    defaults:
+      run:
+        shell: bash
+        working-directory: Lume
+    steps:
+      # Local SwiftPM dependencies must sit beside the Lume project because
+      # Lume.xcodeproj references ../LumeEngine and ../LumeRecorder/Kit.
+      - name: Checkout tested Lume feature branch
+        uses: actions/checkout@v4
+        with:
+          path: Lume
+          persist-credentials: false
+
+      - name: Checkout compatible LumeEngine version
+        uses: actions/checkout@v4
+        with:
+          repository: bilipp/LumeEngine
+          ref: ${{ env.ENGINE_REF }}
+          path: LumeEngine
+          persist-credentials: false
+
+      - name: Checkout compatible LumeRecorder version
+        uses: actions/checkout@v4
+        with:
+          repository: bilipp/LumeRecorder
+          ref: ${{ env.RECORDER_REF }}
+          path: LumeRecorder
+          persist-credentials: false
+
+      - name: Select current stable Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+
+      - name: Verify required build dependencies
+        run: |
+          set -euo pipefail
+          test -f ../LumeEngine/Package.swift
+          test -f ../LumeRecorder/Kit/Package.swift
+          test -f Lume.xcodeproj/project.pbxproj
+          xcodebuild -version
+
+      - name: Validate all Vietnamese catalog entries and format arguments
+        run: |
+          set -euo pipefail
+          swift Scripts/check-vi-localization.swift
+
+      - name: Add optional app API credentials (not required to build)
+        env:
+          TMDB_ACCESS_TOKEN: ${{ secrets.TMDB_ACCESS_TOKEN }}
+          MDBLIST_API_KEY: ${{ secrets.MDBLIST_API_KEY }}
+          INTRO_DB_API_KEY: ${{ secrets.INTRO_DB_API_KEY }}
+          OPENSUBTITLES_API_KEY: ${{ secrets.OPENSUBTITLES_API_KEY }}
+          TRAKT_CLIENT_ID: ${{ secrets.TRAKT_CLIENT_ID }}
+          TRAKT_CLIENT_SECRET: ${{ secrets.TRAKT_CLIENT_SECRET }}
+        run: |
+          set -euo pipefail
+          : > .env
+          for name in TMDB_ACCESS_TOKEN MDBLIST_API_KEY INTRO_DB_API_KEY OPENSUBTITLES_API_KEY TRAKT_CLIENT_ID TRAKT_CLIENT_SECRET; do
+            value="${!name-}"
+            if [[ -n "$value" ]]; then
+              printf '%s=%s\n' "$name" "$value" >> .env
+            fi
+          done
+
+      - name: Download Metal compiler toolchain
+        run: |
+          set -euo pipefail
+          xcodebuild -downloadComponent MetalToolchain
+
+      - name: Archive unsigned iPhoneOS app with isolated Pro Test
+        run: |
+          set -euo pipefail
+          xcodebuild archive \
+            -project Lume.xcodeproj \
+            -scheme Lume \
+            -configuration Sideload \
+            -destination 'generic/platform=iOS' \
+            -archivePath "$RUNNER_TEMP/Lume-ProTest.xcarchive" \
+            "SWIFT_ACTIVE_COMPILATION_CONDITIONS=SIDE_LOAD PRO_TEST" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            ENABLE_HARDENED_RUNTIME=NO \
+            2>&1 | tee "$RUNNER_TEMP/Lume-ProTest-xcodebuild.log"
+
+      - name: Verify iPhoneOS payload and package unsigned IPA
+        run: |
+          set -euo pipefail
+          APP="$RUNNER_TEMP/Lume-ProTest.xcarchive/Products/Applications/Lume.app"
+          test -d "$APP" || { echo "No Lume.app inside the device archive"; exit 1; }
+          TARGET=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleSupportedPlatforms:0' "$APP/Info.plist")
+          test "$TARGET" = "iPhoneOS" || { echo "Unexpected target: $TARGET"; exit 1; }
+          mkdir -p "$RUNNER_TEMP/Lume-ProTest-Package/Payload"
+          ditto "$APP" "$RUNNER_TEMP/Lume-ProTest-Package/Payload/Lume.app"
+          cd "$RUNNER_TEMP/Lume-ProTest-Package"
+          zip -qry "$RUNNER_TEMP/Lume-iOS-Vietnamese-ProTest-unsigned.ipa" Payload
+          unzip -tq "$RUNNER_TEMP/Lume-iOS-Vietnamese-ProTest-unsigned.ipa"
+          echo "Unsigned IPA for Sideloadly packaged successfully."
+
+      - name: Upload IPA as downloadable GitHub Actions artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Lume-iOS-Vietnamese-ProTest-unsigned
+          path: ${{ runner.temp }}/Lume-iOS-Vietnamese-ProTest-unsigned.ipa
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 0
+
+      - name: Upload build log if build failed
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Lume-ProTest-build-log
+          path: ${{ runner.temp }}/Lume-ProTest-xcodebuild.log
+          if-no-files-found: ignore
+          retention-days: 7
