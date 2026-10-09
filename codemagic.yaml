@@ -27,6 +27,9 @@ workflows:
         script: |
           set -euo pipefail
           xcodebuild -downloadComponent MetalToolchain
+      # ProTest is defined in the Xcode project, not passed as a global CLI
+      # compilation condition. Global overrides strip SWIFT_PACKAGE from
+      # third-party packages such as KSPlayer and break Bundle.module.
       - name: Archive unsigned app for a real iPhone
         script: |
           set -euo pipefail
@@ -34,10 +37,9 @@ workflows:
           xcodebuild archive \
             -project "$CM_BUILD_DIR/Lume.xcodeproj" \
             -scheme Lume \
-            -configuration Sideload \
+            -configuration ProTest \
             -destination 'generic/platform=iOS' \
             -archivePath "$CM_BUILD_DIR/build/Lume-ProTest.xcarchive" \
-            "SWIFT_ACTIVE_COMPILATION_CONDITIONS=SIDE_LOAD PRO_TEST" \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
