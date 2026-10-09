@@ -1,0 +1,95 @@
+1055|Tạm thời không khả dụng
+1056|Quần vợt
+1057|Điều khoản sử dụng
+1058|Kiểm tra kết nối
+1059|Thư mục này trống. Hãy nhập đường dẫn đầy đủ đến thư mục chứa nội dung — địa chỉ gốc của máy chủ thường không hiển thị tệp.
+1060|Mã ghép nối không đúng hoặc đã hết hạn. Hãy kiểm tra mã hiện trên máy chủ ghi hình.
+1061|URL này không phải máy chủ Jellyfin hoặc Emby. Hãy nhập địa chỉ gốc của máy chủ, ví dụ http://192.168.1.10:8096.
+1062|URL này không phải máy chủ Plex. Hãy nhập địa chỉ gốc của máy chủ, ví dụ http://192.168.1.10:32400.
+1063|URL này không phải thư mục chia sẻ WebDAV. Hãy nhập đường dẫn đầy đủ của thư mục chia sẻ, không chỉ địa chỉ máy chủ.
+1064|Địa chỉ máy tính chạy LumeRecorder. Nếu không nhập cổng, Lume sẽ dùng %@.
+1065|Bộ đệm quyết định lượng dữ liệu đã giải mã được giữ trước khi phát hoặc phát tiếp. Hãy tăng nếu luồng 4K tốc độ bit cao thường bị giật.
+1066|Hết thời gian chờ kết nối. Hãy kiểm tra URL và mạng rồi thử lại.
+1067|Nhật ký chẩn đoán được lưu trên thiết bị cho đến khi bạn gửi. Các mục cũ nhất sẽ tự bị xóa.
+1068|Báo cáo chẩn đoán đã được đính kèm.
+1069|Tệp đã tải sẽ bị xóa. Bạn có thể tải lại sau.
+1070|Nếu bỏ trống, URL EPG sẽ được lấy từ danh sách phát.
+1071|Lần kết nối đầu tiên sẽ xin quyền tìm thiết bị trong mạng cục bộ. Nếu từ chối, bạn chỉ có thể cấp lại quyền này trong Cài đặt hệ thống.
+1072|The Movie Database (TMDB)
+1073|Máy chủ Plex từ chối token này.
+1074|Ghi hình thất bại.
+1075|Máy chủ ghi hình chưa thể thực hiện thao tác này.
+1076|Máy chủ ghi hình đã đạt số luồng tối đa. Hãy dừng một bản ghi khác rồi thử lại.
+1077|Máy chủ ghi hình đã hết dung lượng. Hãy xóa bớt bản ghi rồi thử lại.
+1078|Có thể kết nối máy chủ ghi hình.
+1079|Máy chủ ghi hình từ chối yêu cầu.
+1080|Máy chủ ghi hình báo lỗi (HTTP %lld).
+1081|Máy chủ ghi hình trả về dữ liệu Lume không đọc được.
+1082|Quá trình ghi hình bị gián đoạn.
+1083|Yêu cầu đã bị hủy.
+1084|Cùng một mục đã được thay đổi trên thiết bị khác. Lần đồng bộ tới sẽ hợp nhất các thay đổi.
+1085|Máy chủ không thu được hình ảnh từ luồng phát.
+1086|Máy chủ lấy luồng phát từ địa chỉ IP của chính nó. Nếu nhà cung cấp chỉ cho phép một kết nối cùng lúc, ghi hình có thể thất bại khi bạn đang xem.
+1087|Máy chủ đã hết dung lượng lưu trữ.
+1088|Máy chủ từ chối thông tin đăng nhập này.
+1089|Máy chủ từ chối tên đăng nhập và mật khẩu này.
+1090|Máy chủ từ chối tên đăng nhập và mật khẩu. Hãy để trống cả hai nếu thư mục cho phép truy cập ẩn danh.
+1091|Máy chủ trả về dữ liệu Lume không đọc được.
+1092|URL máy chủ không hợp lệ.
+1093|Máy chủ đang ghi số luồng tối đa cho phép.
+1094|Máy chủ chưa chạy khi đến giờ ghi hình.
+1095|URL thư mục chia sẻ không hợp lệ.
+1096|Toàn bộ thông tin TMDB và dữ liệu biểu diễn ngữ nghĩa trên thiết bị sẽ bị xóa, sau đó lập lại chỉ mục từ đầu trong nền.
+1097|Lịch phát sóng tự làm mới ngầm theo chu kỳ này.
+1098|Chưa có thông tin lịch phát sóng cho kênh này.
+1099|Hiệu suất lượt tấn công thứ ba
+1100|Danh mục này không có kênh
+1101|Danh mục này không có kênh.
+1102|Danh mục này không có phim lẻ
+1103|Danh mục này không có phim bộ
+1104|Thao tác này xóa danh sách kênh đã xem gần đây. Kênh và mục yêu thích của bạn không bị ảnh hưởng.
+1105|Thiết bị này không còn ghép nối với máy chủ ghi hình. Hãy ghép nối lại trong Cài đặt.
+1106|Tài khoản iCloud này không được phép đồng bộ.
+1107|Đây là liên kết nhà cung cấp Xtream. Bạn có thể dùng như danh sách phát m3u hoặc thêm dưới dạng đăng nhập Xtream — cách thứ hai cần đồng bộ ít dữ liệu hơn cho cùng một danh mục.
+1108|Hiện không có dữ liệu đội bóng của giải đấu này.
+1109|Thao tác này có thể mất vài phút…
+1110|Xóa vĩnh viễn lịch sử xem, tiến độ và mục yêu thích của %@. Thư viện không bị ảnh hưởng.
+1111|Xóa vĩnh viễn lịch sử xem, tiến độ và mục yêu thích của hồ sơ này. Thư viện không bị ảnh hưởng.
+1112|Máy chủ Plex này yêu cầu đăng nhập. Hãy nhập tên người dùng và mật khẩu tài khoản Plex hoặc dán X-Plex-Token vào ô mật khẩu.
+1113|Máy chủ Plex từ chối token này. Hãy dán X-Plex-Token từ máy chủ hoặc dùng tên đăng nhập và mật khẩu Plex.
+1114|Chương trình này đã bắt đầu.
+1115|Bản ghi này chưa thu được hình ảnh. Hãy thử lại sau vài giây.
+1116|Bản ghi này không còn trên máy chủ.
+1117|Máy chủ ghi hình đang dùng phiên bản API khác. Hãy cập nhật Lume và máy chủ lên phiên bản mới nhất.
+1118|Máy chủ này không có kênh truyền hình, chỉ cung cấp phim lẻ và phim bộ.
+1119|Máy chủ này yêu cầu tên đăng nhập và mật khẩu. Hãy nhập rồi thử lại.
+1120|Không thể tải luồng phát này. Kênh có thể đang ngoại tuyến hoặc tạm thời không khả dụng.
+1121|URL này không trỏ đến máy chủ Jellyfin hoặc Emby. Hãy nhập địa chỉ gốc, ví dụ http://192.168.1.10:8096.
+1122|URL này không trỏ đến máy chủ Plex. Hãy nhập địa chỉ gốc, ví dụ http://192.168.1.10:32400.
+1123|URL này không trỏ đến thư mục chia sẻ WebDAV. Hãy nhập đường dẫn đầy đủ của thư mục.
+1124|Phiên bản Lume này không hỗ trợ loại máy chủ ghi hình này.
+1125|Thư mục chia sẻ WebDAV này không có kênh truyền hình, chỉ có phim lẻ và phim bộ.
+1126|Tỷ lệ ném ba điểm thành công
+1127|Cú ném ba điểm
+1128|Tùy chọn ô phát
+1129|Thời gian dẫn trước
+1130|Thời gian kiểm soát bóng
+1131|Chưa xác định thời gian
+1132|Dòng thời gian
+1133|Tiêu đề
+1134|Để ghi hình, Lume gửi cho máy chủ địa chỉ luồng phát mà trình phát đang dùng. Với danh sách Xtream, địa chỉ này gồm tên đăng nhập và mật khẩu nhà cung cấp.
+1135|Hôm nay
+1136|Hôm nay · %@
+1137|Token
+1138|Ngày mai
+1139|Thử ghép nối quá nhiều lần. Hãy thử lại sau một phút.
+1140|Thanh công cụ
+1141|Đầu hiệp %@
+1142|Tổng số lượt phát
+1143|Tổng số lỗi kỹ thuật
+1144|Tổng số lần mất bóng
+1145|Tổng số yard
+1146|Trakt
+1147|Tích hợp Trakt
+1148|Danh sách xem Trakt
+1149|trakt.tv/activate
