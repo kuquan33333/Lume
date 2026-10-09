@@ -1,0 +1,150 @@
+455|iCloud tạm thời không khả dụng. Quá trình đồng bộ sẽ tự tiếp tục.
+456|iCloud từ chối một số thay đổi. Hãy xuất báo cáo chẩn đoán để xem chi tiết.
+457|Không thể xác định trạng thái iCloud.
+458|Đồng bộ iCloud
+459|Biểu tượng
+460|Màu biểu tượng
+461|Bộ nhớ đệm hình ảnh
+462|Nhập lịch sử đã xem từ Simkl
+463|Nhập lịch sử đã xem từ Trakt
+464|Đã nhập %lld phim%@ và %lld tập%@.
+465|Đang nhập nội dung
+466|Trong mục Yêu thích
+467|Đang thực hiện
+468|Bao gồm
+469|Mã PIN không đúng. Vui lòng thử lại.
+470|Đã lập chỉ mục %lld/%lld tựa phim
+471|Đang lập chỉ mục
+472|Thông tin
+473|Chỉ thông tin
+474|Thông tin
+475|Cài ứng dụng YouTube trên Apple TV để xem trailer.
+476|Tích hợp
+477|Pha cắt bóng
+478|Cúp câu lạc bộ quốc tế
+479|Bị gián đoạn — sẽ thử lại sau
+480|IntroDB
+481|Ý
+482|Máy chủ Jellyfin
+483|Bắt đầu trận đấu
+484|KSPlayer — Bộ đệm
+485|KSPlayer — Giải mã
+486|KSPlayer — Phát video
+487|KSPlayer là trình phát bên thứ ba mạnh mẽ, hỗ trợ nhiều định dạng, kể cả những định dạng thường dùng trong luồng IPTV.
+488|Tùy chọn KSPlayer
+489|Thua
+490|Bóng vợt
+491|Ngôn ngữ
+492|Lớn
+493|Khoảng cách dẫn điểm lớn nhất
+494|Làm mới lần gần nhất thất bại
+495|Lần làm mới gần nhất
+496|Lần làm mới: %@
+497|Đồng bộ lần gần nhất thất bại
+498|Lần đồng bộ gần nhất
+499|Lần đồng bộ: %@
+500|Bố cục
+501|Số lần đổi đội dẫn trước
+502|Giải đấu
+503|Để trống tên đăng nhập và mật khẩu khi chia sẻ ẩn danh. Với Plex, hãy nhập tài khoản Plex hoặc dán X-Plex-Token vào ô mật khẩu.
+504|ít hơn
+505|Thư viện
+506|Dữ liệu thư viện
+507|Giấy phép
+508|Trọn đời
+509|Quyền truy cập trọn đời
+510|Sáng
+511|Đội hình
+512|Danh sách
+513|Thứ tự danh sách
+514|Hiển thị Bản ghi trong thanh bên Truyền hình, bên dưới Yêu thích và Xem gần đây.
+515|Trực tiếp
+516|TRỰC TIẾP
+517|Bộ đệm truyền hình trực tiếp
+518|Định dạng luồng trực tiếp
+519|Truyền hình
+520|Danh mục truyền hình
+521|Kênh truyền hình
+522|Bố cục Truyền hình
+523|Đang tải chi tiết…
+524|Đang tải tập phim…
+525|Đang tải đội bóng…
+526|Đang tải…
+527|Khóa một danh mục để ẩn khỏi hồ sơ trẻ em. Kéo để đổi thứ tự.
+528|Tỷ lệ chuyền dài chính xác
+529|Đường chuyền dài
+530|Phát lặp lại
+531|Thua %lld trận
+532|Độ trễ thấp (không dùng bộ đệm)
+533|Lume
+534|Lume không thể tìm thiết bị trên mạng cục bộ. Hãy cấp quyền Mạng cục bộ cho Lume trong cài đặt hệ thống hoặc tự nhập địa chỉ máy chủ.
+535|Lume không lấy được địa chỉ luồng phát của kênh này.
+536|Lume không kết nối được đến địa chỉ đó trong mạng cục bộ. Nếu đã từ chối quyền truy cập mạng, bạn chỉ có thể cấp lại trong Cài đặt hệ thống.
+537|Lume không kết nối được máy chủ nên máy chủ có thể vẫn lưu thiết bị này. Hãy ghép nối lại hoặc xóa thiết bị trên máy chủ.
+538|Lume không nhận diện được máy chủ media ở địa chỉ này. Nhập địa chỉ gốc của Jellyfin, Emby hoặc Plex, hoặc đường dẫn đầy đủ của thư mục WebDAV.
+539|Chẩn đoán Lume — %@
+540|Lume Engine — Giải mã
+541|Lume Engine — Mạng và bộ đệm
+542|Lume Engine — Phân tích luồng phát
+543|Tùy chọn Lume Engine
+544|Lume sẽ quên máy chủ này trên tất cả thiết bị. Các bản ghi và lịch ghi vẫn nằm trên máy chủ.
+545|Lume miễn phí và có mã nguồn mở. Gói Premium hỗ trợ phát triển ứng dụng và mở khóa một số tiện ích bổ sung.
+546|Lume miễn phí và có mã nguồn mở. Pro hỗ trợ phát triển ứng dụng và mở khóa một số tiện ích bổ sung.
+547|Lume là phần mềm miễn phí, mã nguồn mở theo giấy phép GNU Affero General Public License v3.
+548|Lume sử dụng bộ máy phát được ưu tiên đầu tiên cho từng luồng và tự chuyển sang bộ máy tiếp theo nếu không phát được. Kéo để đổi thứ tự.
+549|Lume phát mỗi luồng bằng bộ máy ưu tiên và chuyển sang bộ máy kế tiếp nếu không phát được.
+550|Lume Pro
+551|Lume chọn ngôn ngữ âm thanh đầu tiên mà luồng phát hỗ trợ theo thứ tự ưu tiên bạn đặt, từ trên xuống. Nếu âm thanh phát ra không thuộc các ngôn ngữ đó và luồng có phụ đề bắt buộc, phụ đề sẽ được bật. Áp dụng từ lần phát tiếp theo.
+552|Lume chọn ngôn ngữ âm thanh đầu tiên mà luồng phát hỗ trợ. Kéo để đổi thứ tự. Nếu ngôn ngữ âm thanh không thuộc danh sách và luồng có phụ đề bắt buộc, phụ đề sẽ được bật. Áp dụng từ lần phát kế tiếp.
+553|Lume Engine là bộ máy FFmpeg 9 do Lume phát triển, hiện ở bản thử nghiệm. Hỗ trợ giải mã tăng tốc phần cứng với hầu hết định dạng, tối ưu độ ổn định khi phát trực tiếp, đồng bộ âm thanh/hình ảnh và Hình trong hình.
+554|Các bộ máy phát của Lume được xây dựng trên những dự án mã nguồn mở sau. Mỗi dự án tuân theo giấy phép riêng.
+555|M3U
+556|Danh sách phát M3U
+557|Địa chỉ MAC
+558|Quản lý nội dung tải xuống
+559|Quản lý hồ sơ
+560|Quản lý gói đăng ký
+561|Quản lý đội bóng
+562|Đánh dấu tất cả mục tiếp theo là chưa xem
+563|Đánh dấu tất cả mục trước đó là đã xem
+564|Đánh dấu chưa xem
+565|Đánh dấu chưa xem
+566|Đánh dấu đã xem
+567|Đánh dấu đã xem
+568|Đối chiếu thư viện với TMDB và xây dựng chỉ mục trên thiết bị để tìm kiếm thông minh hơn và tạo mục Dành cho bạn trên Trang chủ. Chạy chậm ở chế độ nền.
+569|Đối chiếu thư viện với TMDB và lập chỉ mục trên thiết bị để tìm kiếm thông minh hơn. Quá trình chạy chậm ở chế độ nền.
+570|Số kết nối tối đa
+571|Số lượt tải xuống đồng thời tối đa: %lld
+572|Dung lượng bộ đệm tối đa
+573|Máy chủ media
+574|Siêu dữ liệu
+575|Giữa hiệp %@
+576|Hằng tháng
+577|Gói đăng ký hằng tháng
+578|thêm
+579|Thêm
+580|Nội dung tương tự
+581|Đua xe thể thao
+582|Di chuyển %@
+583|Di chuyển %@ xuống
+584|Di chuyển %@ lên
+585|Di chuyển lên hoặc xuống đến vị trí mong muốn, sau đó chọn để đặt. Nhấn Menu để hủy.
+586|Phim
+587|Danh mục phim lẻ
+588|Phim lẻ
+589|Phim lẻ và phim bộ
+590|Phim lẻ và phim bộ được tải khi bạn duyệt, không tải trước. Tải toàn bộ danh mục để xem ngoại tuyến và tìm kiếm ngay cả khi không có mạng; cổng dữ liệu lớn có thể mất nhiều thời gian.
+591|Phim mới thêm vào thư viện sẽ xuất hiện tại đây
+592|Phim bạn yêu thích sẽ xuất hiện tại đây
+593|Phim bạn đã xem sẽ xuất hiện tại đây
+594|Phim lẻ, Phim bộ và Truyền hình áp dụng cho %@, danh sách phát đang dùng. Thể thao áp dụng cho mọi danh sách.
+595|Phim lẻ, Phim bộ, Truyền hình…
+596|Xem nhiều kênh
+597|Nhiều hồ sơ
+598|Tắt tiếng
+599|Đội của tôi
+600|Tên
+601|Tên (A–Z)
+602|Tên (Z–A)
+603|Đội tuyển quốc gia
+604|Trình phát gốc của Apple, tối ưu cho HLS và MP4 nhưng không hỗ trợ nhiều định dạng thường dùng trong IPTV.
