@@ -49,3 +49,17 @@ Không thêm chứng chỉ / provisioning profile hoặc thông tin Apple Develo
 - Đảm bảo kiểm tra `vi` ở app chính, widget, quyền Mạng cục bộ và màn hình Pro.
 - Thử iPhone đặt Tiếng Việt, sau đó đổi ưu tiên ngôn ngữ sang tiếng Anh / ngôn ngữ khác để kiểm tra fallback.
 - Test chuỗi động, số ít/nhiều, ngày giờ, các nhãn dài, giao diện landscape và tvOS.
+
+## Build IPA bằng GitHub Actions (giữ nguyên Codemagic)
+
+Workflow riêng: [`.github/workflows/ios-pro-test-unsigned.yml`](../.github/workflows/ios-pro-test-unsigned.yml).
+
+- Workflow chỉ build **iOS thiết bị thật**, không tốn tài khoản Apple Developer trả phí: dùng `macos-26`, Xcode, `Sideload` + `SIDE_LOAD PRO_TEST` và `CODE_SIGNING_ALLOWED=NO`.
+- Dùng hai dependency có version cố định như workflow sideload sẵn có, kiểm tra bản dịch tiếng Việt trước khi biên dịch.
+- Khi build thành công, vào **GitHub > Actions > Lume iOS Pro Test - Unsigned IPA (Sideloadly) > bản chạy thành công > Artifacts**, tải `Lume-iOS-Vietnamese-ProTest-unsigned`. Giải nén artifact sẽ được tệp **`Lume-iOS-Vietnamese-ProTest-unsigned.ipa`**.
+- Mở IPA bằng Sideloadly trên PC và để **Sideloadly ký lại** bằng Apple ID miễn phí rồi cài lên iPhone. Không cần thiết lập certificate, provisioning profile hay Apple Developer account trong GitHub Actions.
+- Artifact có thời hạn lưu 7 ngày. Khi build lỗi, workflow có thể đính kèm `Lume-ProTest-build-log` để chẩn đoán.
+- **Nhánh mới chưa có workflow trên `main`:** GitHub chỉ cho phép bấm *Run workflow* trực tiếp đối với workflow đã tồn tại trên default branch. Do vậy workflow có trigger `push` khi chính tệp YAML được thêm/chỉnh trên nhánh tính năng, bảo đảm có lần build đầu tiên **không thay đổi main**. Muốn chạy lại đúng commit đó, mở bản chạy đã có và chọn **Re-run all jobs**. Để build commit mới sau khi sửa code, hãy đẩy một lần thay đổi vào chính workflow hoặc đưa workflow lên default branch theo quy trình merge đã được duyệt.
+- GitHub Actions chịu giới hạn phút sử dụng và tình trạng runner. Nếu hết hạn mức, phải đợi hạn mức reset hoặc dùng Codemagic. Cấu hình **`codemagic.yaml` vẫn được giữ nguyên**.
+
+Bản GitHub Actions mới độc lập với workflow phát hành `sideload-release.yml` của dự án.
