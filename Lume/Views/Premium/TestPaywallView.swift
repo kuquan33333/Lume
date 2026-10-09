@@ -56,12 +56,22 @@ struct TestPaywallView: View {
                             Button { selectedPlan = plan } label: {
                                 HStack {
                                     VStack(alignment: .leading, spacing: 3) {
-                                        Text(plan == .monthly ? "Monthly" : "Lifetime")
-                                            .fontWeight(.semibold)
-                                        Text(plan == .monthly
-                                             ? "Billed monthly, cancel anytime"
-                                             : "One-time purchase")
-                                            .font(.caption)
+                                        Group {
+                                            if plan == .monthly {
+                                                Text("Monthly")
+                                            } else {
+                                                Text("Lifetime")
+                                            }
+                                        }
+                                        .fontWeight(.semibold)
+                                        Group {
+                                            if plan == .monthly {
+                                                Text("Billed monthly, cancel anytime")
+                                            } else {
+                                                Text("One-time purchase")
+                                            }
+                                        }
+                                        .font(.caption)
                                     }
                                     Spacer()
                                     Text(plan == .monthly ? "$0.99" : "$9.99")
