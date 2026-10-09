@@ -11,6 +11,11 @@ workflows:
         ENGINE_REF: v0.3.2
         RECORDER_REF: v0.1.1
     scripts:
+      - name: Validate complete Vietnamese localization
+        script: |
+          set -euo pipefail
+          cd "$CM_BUILD_DIR"
+          swift Scripts/check-vi-localization.swift
       - name: Checkout required local Swift packages
         script: |
           set -euo pipefail
