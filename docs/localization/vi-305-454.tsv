@@ -1,0 +1,150 @@
+305|Số pha phá bóng hiệu quả
+306|Email
+307|Gửi báo cáo qua email cho nhà phát triển
+308|Gửi email cho nhà phát triển
+309|Máy chủ Emby
+310|Ô phát trống
+311|Đã bật
+312|Cuối %@
+313|Kết thúc thời gian thi đấu chính thức
+314|Cuối %@
+315|Kết thúc %@
+316|Bộ máy phát
+317|Tùy chọn bộ máy phát
+318|Ưu tiên bộ máy phát
+319|Các bộ máy phát
+320|Nhập địa chỉ máy chủ hợp lệ, ví dụ 192.168.1.20:%@.
+321|Nhập địa chỉ thủ công
+322|Nhập mã PIN hiện tại
+323|Nhập mã PIN
+324|Nhập mã gồm 6 chữ số từ máy chủ ghi hình. Mã xuất hiện trong nhật ký máy chủ; bạn cũng có thể chạy lệnh lume-recorder pair trên máy chủ để xem mã hiện tại.
+325|Nhập URL đầy đủ của thư mục — không thể duyệt trực tiếp từ địa chỉ gốc của máy chủ. Tên đăng nhập và mật khẩu không bắt buộc. Nếu đã từ chối quyền mạng cục bộ, bạn chỉ có thể cấp lại trong Cài đặt.
+326|Nhập URL đầy đủ của thư mục chứa nội dung — thường không thể duyệt trực tiếp từ địa chỉ gốc máy chủ.
+327|Nhập URL danh sách phát hoặc chọn tệp m3u/m3u8 trên thiết bị. Nếu bỏ trống URL EPG, ứng dụng sẽ lấy từ danh sách phát.
+328|Nhập URL cổng dịch vụ và địa chỉ MAC đã được nhà cung cấp cho phép.
+329|Nhập URL cổng dịch vụ và địa chỉ MAC đã được nhà cung cấp cho phép. Phần lớn cổng chỉ cần hai thông tin này.
+330|Nhập mã này
+331|Nhập mã này tại simkl.com/pin
+332|Nhập mã này tại trakt.tv/activate
+333|Nhập mã PIN hiện tại để thay đổi.
+334|Nhập mã PIN hiện tại để tắt.
+335|Nhập mã PIN để quản lý nội dung.
+336|Nhập mã PIN để quản lý hồ sơ.
+337|Nhập mã PIN để chuyển hồ sơ.
+338|Nhập địa chỉ máy chủ — Jellyfin, Emby, Plex và WebDAV sẽ được tự nhận diện. Nếu đã từ chối quyền mạng cục bộ, bạn chỉ có thể cấp lại trong Cài đặt.
+339|Nhập địa chỉ máy chủ — Lume tự nhận diện máy chủ Jellyfin, Emby, Plex và thư mục chia sẻ WebDAV.
+340|Nhập tên người dùng, không phải địa chỉ email dùng để đăng ký — OpenSubtitles không chấp nhận email ở đây.
+341|Nguồn EPG
+342|URL EPG
+343|URL EPG (không bắt buộc)
+344|Tập %lld
+345|Các tập phim
+346|Lỗi
+347|Châu Âu
+348|Mỗi 3 ngày
+349|Mỗi 6 giờ
+350|Hằng ngày
+351|Hằng tuần
+352|Mọi nội dung
+353|Toàn bộ mục đang hiển thị sẽ bị ẩn khi duyệt. Chọn Hiện tất cả để khôi phục.
+354|Thoát Hình trong hình
+355|Kinh nghiệm
+356|Hết hạn
+357|Trình phát bên ngoài
+358|Hiệp phụ
+359|Tỷ lệ thắng giao bóng
+360|Số lần thắng giao bóng
+361|Thất bại
+362|Mở nhanh
+363|Điểm phản công nhanh
+364|Yêu thích
+365|Kênh yêu thích
+366|Yêu thích
+367|FFmpeg áp dụng tất cả tùy chọn bên dưới cho mọi luồng phát.
+368|Tỷ lệ ghi điểm bằng cú đá
+369|Số lần ghi điểm bằng cú đá
+370|Lấp đầy màn hình
+371|Bộ lọc
+372|Kết thúc
+373|Đang tìm nội dung đề xuất…
+374|Số lần giành lượt tấn công mới
+375|Số lần giành lượt tấn công mới do đối phương phạm lỗi
+376|Vừa khung hình
+377|Thẻ trận đấu và trang chi tiết sẽ ẩn tỷ số, kết quả, diễn biến và thống kê.
+378|Lịch thi đấu, tỷ số trực tiếp và bảng xếp hạng được làm mới khi bạn mở Trang chủ hoặc tab Thể thao, và mỗi phút khi chúng đang hiển thị.
+379|Lỗi thô bạo
+380|Theo dõi
+381|Theo dõi %@
+382|Theo dõi các giải đấu và đội bóng bên dưới để tạo Trung tâm thể thao của bạn.
+383|Theo dõi các giải đấu và đội bóng để tạo Trung tâm thể thao.
+384|Theo dõi các giải đấu và đội bóng để tạo Trung tâm thể thao. Lịch đấu, tỷ số trực tiếp và bảng xếp hạng lấy từ ESPN; mỗi trận có liên kết đến kênh trong danh sách phát của bạn.
+385|Theo dõi giải đấu và đội bóng để xem lịch đấu, tỷ số trực tiếp và bảng xếp hạng tại đây.
+386|Theo giao diện thiết bị hoặc luôn dùng chế độ Tối/Sáng trong Lume.
+387|Theo dõi giải đấu và đội bóng của bạn để xem lịch thi đấu, tỷ số trực tiếp, bảng xếp hạng và mở kênh phát trận đấu chỉ với một chạm.
+388|Theo dõi đội yêu thích
+389|Đang theo dõi
+390|Với thư mục WebDAV, nhập đường dẫn đầy đủ đến thư mục chứa nội dung — thường không thể duyệt trực tiếp từ địa chỉ gốc máy chủ.
+391|Dành cho bạn
+392|Đề xuất dành cho bạn
+393|Bật Pro thủ công
+394|Lỗi phạm
+395|Hiệu suất lượt tấn công thứ tư
+396|Tốc độ khung hình
+397|Pháp
+398|Miễn phí
+399|Dung lượng đĩa còn trống
+400|Gói miễn phí chỉ hỗ trợ một danh sách phát. Nâng cấp Lume Pro để thêm nhiều hơn.
+401|Gói miễn phí chỉ có một hồ sơ. Nâng cấp Lume Pro để cả gia đình cùng sử dụng.
+402|Gói miễn phí
+403|Gói miễn phí · Xem quyền lợi
+404|Buổi chạy thử 1
+405|Buổi chạy thử 2
+406|Buổi chạy thử 3
+407|Tỷ lệ ném phạt thành công
+408|Số lần ném phạt
+409|Từ danh sách phát
+410|Từ danh sách xem trên Simkl
+411|Từ danh sách xem trên Trakt
+412|Hết giờ
+413|Số lần mất bóng do đánh rơi
+414|Trận đấu
+415|Đã thi đấu %lld trận
+416|Hiệu số
+417|Tạo địa chỉ MAC mới
+418|Đức
+419|Nhận mục Dành cho bạn với đề xuất theo sở thích, dựa trên thư viện và lịch sử xem ngay trên thiết bị.
+420|Nhận hỗ trợ, đề xuất tính năng hoặc báo lỗi.
+421|Mỗi người có lịch sử xem, tiến độ và mục yêu thích riêng.
+422|Số lần mất quyền kiểm soát bóng
+423|Bàn thắng
+424|Bàn thắng (đá phạt)
+425|Bàn thắng (đánh đầu)
+426|Bàn thắng (vô-lê)
+427|Hiệu số bàn thắng: %lld
+428|Số trận
+429|Lịch phát sóng
+430|Dữ liệu lịch phát sóng được ghép với các kênh từ tất cả danh sách phát.
+431|Xem trước lịch phát sóng
+432|Giữa hiệp
+433|Giải mã phần cứng
+434|Trợ giúp và phản hồi
+435|Ẩn %@
+436|Ẩn tất cả
+437|Ẩn tất cả danh mục?
+438|Ẩn tất cả kênh?
+439|Ẩn và sắp xếp danh mục, kênh của danh sách phát đang dùng.
+440|Ẩn danh mục để chúng không xuất hiện trong %@.
+441|Ẩn danh mục khỏi Truyền hình hoặc chạm một danh mục để quản lý kênh.
+442|Ẩn kênh khỏi danh mục này hoặc kéo để sắp xếp lại.
+443|Ẩn tỷ số
+444|Số cú đánh trúng bóng
+445|Nhấn giữ kênh để thêm vào Yêu thích hoặc Xem nhiều kênh
+446|Nhấn giữ kênh để thêm vào Yêu thích, Xem nhiều kênh hoặc ghi hình
+447|Trang chủ
+448|Cách hiển thị kênh ở tab Truyền hình: Lịch phát sóng hiển thị theo dòng thời gian chương trình, Danh sách hiển thị các kênh đơn giản.
+449|Kết nối lại HTTP
+450|Tôi đã hiểu
+451|Khúc côn cầu trên băng
+452|iCloud
+453|iCloud đang bận. Ứng dụng sẽ tự thử đồng bộ lại.
+454|iCloud bị hạn chế trên thiết bị (ví dụ do Thời gian sử dụng hoặc hồ sơ quản lý).
