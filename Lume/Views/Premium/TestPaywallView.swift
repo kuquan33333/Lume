@@ -1,6 +1,6 @@
 // Isolated checkout for an unsigned Sideloadly QA build.
 // Not compiled into real-purchase or regular sideload builds.
-#if PRO_TEST
+#if PRO_TEST && SIDE_LOAD
 import SwiftUI
 
 struct TestPaywallView: View {
