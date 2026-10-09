@@ -1,6 +1,6 @@
 // Only active in the isolated PRO_TEST sideload configuration.
 // The normal StoreKit 2 purchase implementation remains untouched.
-#if PRO_TEST
+#if PRO_TEST && SIDE_LOAD
 @testable import Lume
 import Testing
 
