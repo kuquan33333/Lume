@@ -11,7 +11,7 @@
 2. Chọn chính xác nhánh `feat/vi-localization-pro-test-codemagic` và dò `codemagic.yaml`.
 3. Chọn workflow **iOS Pro Test - Unsigned IPA for Sideloadly** rồi chạy.
 4. Workflow tự tải `bilipp/LumeEngine` tại `v0.3.2`, `bilipp/LumeRecorder` tại `v0.1.1` vào hai thư mục ngang hàng với Lume. Các bản này được ghim theo workflow sideload sẵn có của Lume.
-5. Xcode build **iPhoneOS** với cấu hình `Sideload`, bật `SIDE_LOAD PRO_TEST`, vô hiệu hóa code signing, rồi đóng gói **`Lume-iOS-ProTest-unsigned.ipa`**.
+5. Xcode build **iPhoneOS** với cấu hình `ProTest` (kế thừa `Sideload`, có riêng cờ `PRO_TEST`), vô hiệu hóa code signing, rồi đóng gói **`Lume-iOS-ProTest-unsigned.ipa`**.
 6. Tải IPA trong phần artifacts của Codemagic.
 
 Không thêm chứng chỉ / provisioning profile hoặc thông tin Apple Developer vào Codemagic. Đây là cách đóng gói IPA **chưa ký**, không phải bản đã ký để đưa trực tiếp lên iPhone.
@@ -54,7 +54,7 @@ Không thêm chứng chỉ / provisioning profile hoặc thông tin Apple Develo
 
 Workflow riêng: [`.github/workflows/ios-pro-test-unsigned.yml`](../.github/workflows/ios-pro-test-unsigned.yml).
 
-- Workflow chỉ build **iOS thiết bị thật**, không tốn tài khoản Apple Developer trả phí: dùng `macos-26`, Xcode, `Sideload` + `SIDE_LOAD PRO_TEST` và `CODE_SIGNING_ALLOWED=NO`.
+- Workflow chỉ build **iOS thiết bị thật**, không tốn tài khoản Apple Developer trả phí: dùng `macos-26`, Xcode, cấu hình riêng `ProTest` và `CODE_SIGNING_ALLOWED=NO`.
 - Dùng hai dependency có version cố định như workflow sideload sẵn có, kiểm tra bản dịch tiếng Việt trước khi biên dịch.
 - Khi build thành công, vào **GitHub > Actions > Lume iOS Pro Test - Unsigned IPA (Sideloadly) > bản chạy thành công > Artifacts**, tải `Lume-iOS-Vietnamese-ProTest-unsigned`. Giải nén artifact sẽ được tệp **`Lume-iOS-Vietnamese-ProTest-unsigned.ipa`**.
 - Mở IPA bằng Sideloadly trên PC và để **Sideloadly ký lại** bằng Apple ID miễn phí rồi cài lên iPhone. Không cần thiết lập certificate, provisioning profile hay Apple Developer account trong GitHub Actions.
@@ -63,3 +63,9 @@ Workflow riêng: [`.github/workflows/ios-pro-test-unsigned.yml`](../.github/work
 - GitHub Actions chịu giới hạn phút sử dụng và tình trạng runner. Nếu hết hạn mức, phải đợi hạn mức reset hoặc dùng Codemagic. Cấu hình **`codemagic.yaml` vẫn được giữ nguyên**.
 
 Bản GitHub Actions mới độc lập với workflow phát hành `sideload-release.yml` của dự án.
+
+## Sửa lỗi build KSPlayer / Bundle.module (2026-10-09)
+- Lần build GitHub Actions #37956872215 bị lỗi `invalid redeclaration of 'module'` ở `resource_bundle_accessor.swift` của KSPlayer. Nguyên nhân: truyền toàn bộ `SWIFT_ACTIVE_COMPILATION_CONDITIONS=SIDE_LOAD PRO_TEST` trên dòng lệnh Xcode đã xóa cờ `SWIFT_PACKAGE` vốn được SwiftPM tự đặt. KSPlayer từ đó kích hoạt phần `#if !SWIFT_PACKAGE` và trùng `Bundle.module` với mã do SwiftPM tạo.
+- Khắc phục ở **cấu hình ứng dụng**, không sửa KSPlayer: thêm cấu hình Xcode riêng `ProTest`, kế thừa mọi thiết lập `Sideload`, chỉ khai báo `SIDE_LOAD PRO_TEST $(inherited)` trong cấu hình dự án. Giữ nguyên tất cả cấu hình `Sideload`, `Release`, `Debug` và các quyền lợi Pro thương mại.
+- Cả `codemagic.yaml` và GitHub Actions đều dùng `-configuration ProTest`, **không** ghi đè `SWIFT_ACTIVE_COMPILATION_CONDITIONS` khi gọi `xcodebuild`. Swift Package Manager giữ lại cờ riêng `SWIFT_PACKAGE`.
+- Cần phân biệt: cấu hình được sửa và kiểm tra tĩnh chưa có nghĩa IPA chạy được; xem kết quả bản build tự động kế tiếp và thử cài bằng Sideloadly trước khi xác nhận hoàn tất.
