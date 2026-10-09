@@ -36,7 +36,9 @@ struct PaywallView: View {
     private static let privacyURL = URL(string: "https://github.com/bilipp/Lume/blob/main/PRIVACY.md")!
 
     var body: some View {
-        #if os(tvOS)
+        #if PRO_TEST
+            TestPaywallView(highlight: highlight)
+        #elseif os(tvOS)
             tvBody
         #else
             standardBody
