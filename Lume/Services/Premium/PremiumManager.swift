@@ -69,7 +69,7 @@ final class PremiumManager {
     /// True while a purchase or restore is in flight, for button spinners.
     private(set) var isWorking = false
 
-    #if PRO_TEST
+    #if PRO_TEST && SIDE_LOAD
         /// QA-only sideload purchase simulation. Never calls Apple payment APIs.
         private static let testPlanKey = "lume.proTest.selectedPlan"
 
