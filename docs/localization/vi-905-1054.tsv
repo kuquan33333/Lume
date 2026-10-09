@@ -1,0 +1,150 @@
+905|Danh mục phim bộ
+906|Phim bộ mới thêm vào thư viện sẽ xuất hiện tại đây
+907|Phim bộ bạn yêu thích sẽ xuất hiện tại đây
+908|Phim bộ bạn đã xem sẽ xuất hiện tại đây
+909|Máy chủ
+910|Địa chỉ máy chủ
+911|Kết nối máy chủ
+912|Lỗi máy chủ (HTTP %lld).
+913|URL máy chủ
+914|Máy chủ trong mạng này
+915|Đặt mã PIN
+916|Cài đặt
+917|Hướng dẫn thiết lập
+918|Chia sẻ báo cáo…
+919|Chia sẻ URL
+920|Loạt phân định thắng thua
+921|Bàn thắng trong loạt phân định
+922|Bàn thắng khi thiếu người
+923|Tỷ lệ sút chính xác
+924|Cú sút
+925|Sút trúng đích
+926|Hiện %@
+927|Hiện tất cả
+928|Hiện tất cả và Ẩn tất cả chỉ áp dụng cho các mục đang hiện trong danh sách. Bạn có thể tìm kiếm trước rồi áp dụng hàng loạt cho kết quả.
+929|Hiện chi tiết
+930|Hiện trên thanh bên Truyền hình
+931|Hiển thị lớn
+932|Thu gọn
+933|Hiện nút Tập tiếp theo
+934|Hiển thị đề xuất
+935|Hiện nút Bỏ qua mở đầu
+936|Hiện tab Thể thao
+937|Hiện thông tin luồng phát
+938|Hiện tab Thể thao. Mục lịch thi đấu trên Trang chủ được điều chỉnh trong cài đặt bố cục Trang chủ.
+939|Hiển thị danh sách phát và chương trình đang phát.
+940|Hiển thị những nút này trên thanh công cụ Truyền hình. Mục Bản ghi xuất hiện khi đã ghép nối máy chủ ghi hình.
+941|Hiển thị các bộ sưu tập này phía trên danh mục trong Truyền hình.
+942|Hiển thị kênh này trong ô lớn
+943|Đăng nhập
+944|Đăng nhập iCloud trong Cài đặt để đồng bộ danh sách phát và hoạt động xem giữa các thiết bị.
+945|Đăng nhập iCloud để tiếp tục đồng bộ.
+946|Đăng nhập tài khoản OpenSubtitles để tải phụ đề.
+947|Đăng nhập tài khoản miễn phí tại opensubtitles.com để tải phụ đề phim từ menu phụ đề của trình phát.
+948|Đăng nhập tài khoản miễn phí trên opensubtitles.com để tải phụ đề. Bạn vẫn có thể tìm kiếm mà không cần tài khoản.
+949|Đăng xuất
+950|Đã đăng nhập
+951|Simkl
+952|Tích hợp Simkl
+953|Danh sách xem Simkl
+954|simkl.com/pin
+955|Đơn giản
+956|Điều khiển Siri Remote
+957|Tua lùi 15 giây
+958|Tua tới 15 giây
+959|Bỏ qua khung hình
+960|Bỏ qua mở đầu
+961|Bỏ qua phần tóm tắt
+962|Nhỏ
+963|Chế độ Nhỏ và Lớn phát hình kênh đang chọn nhưng tắt tiếng và vẫn sử dụng một kết nối từ nhà cung cấp. Chỉ thông tin không phát video; Tắt sẽ dành toàn bộ chiều cao cho lịch phát sóng.
+964|Phát thông minh
+965|Làm mượt các kênh xen kẽ (thường là 1080i). Nên tắt ở đây vì VLC không hỗ trợ giải mã phần cứng với video xen kẽ. Việc tắt có thể gây giật trên một số kênh.
+966|Làm mượt các kênh xen kẽ (thường là 1080i). Tắt để hiển thị khung hình gốc, nhưng chuyển động có thể xuất hiện răng lược.
+967|Có tính năng không hoạt động? Hãy gửi báo cáo chẩn đoán cho nhà phát triển.
+968|Có tính năng không hoạt động? Hãy gửi bản tóm tắt chẩn đoán cho nhà phát triển.
+969|Sắp xếp theo
+970|Nguồn
+971|Mã nguồn
+972|Nguồn
+973|Tây Ban Nha
+974|Thể thao
+975|Dữ liệu thể thao
+976|Dữ liệu thể thao chưa được làm mới.
+977|Trung tâm thể thao
+978|Chung kết
+979|Tứ kết
+980|Bán kết
+981|Spotlight
+982|Chạy nước rút
+983|Phân hạng Sprint
+984|Stalker
+985|Cổng Stalker
+986|Phát hiện đứng hình
+987|Bảng xếp hạng
+988|Bắt đầu xem nhiều kênh
+989|Bắt đầu đồng bộ
+990|Khởi động
+991|Thống kê
+992|Trạng thái
+993|Cướp bóng
+994|Hướng dẫn từng bước thiết lập máy chủ LumeRecorder.
+995|Dừng ghi hình
+996|Dừng bản ghi này?
+997|Đã dừng ghi “%@”
+998|Bộ nhớ
+999|Bộ nhớ và bộ đệm
+1000|Dung lượng đã dùng
+1001|Thông tin luồng phát
+1002|Không thể phát luồng
+1003|Luồng sẽ mở trong ứng dụng đã chọn thay vì trình phát Lume. Nội dung tải xuống luôn phát bằng Lume; nếu chưa cài ứng dụng ngoài hoặc luồng không thuộc phạm vi được chọn, Lume sẽ dùng trình phát tích hợp.
+1004|Khi đã cài trình phát bên ngoài, luồng sẽ mở bằng ứng dụng đó thay cho Lume. Một số ứng dụng như Infuse chỉ phát phim mà không phát kênh trực tiếp; bạn có thể giới hạn việc chuyển sang ứng dụng ngoài cho từng loại nội dung.
+1005|Gói đăng ký
+1006|Thay người
+1007|Ngôn ngữ phụ đề
+1008|Chỉ có thể tìm phụ đề cho phim và tập phim.
+1009|Bản dựng này không hỗ trợ tìm phụ đề.
+1010|Chỉ tìm phụ đề bằng các ngôn ngữ này.
+1011|Phụ đề
+1012|Số pha tắc bóng thành công
+1013|Đề xuất
+1014|Hỗ trợ
+1015|Tạm ngừng
+1016|Thao tác vuốt
+1017|Vuốt trên bề mặt cảm ứng của điều khiển để điều khiển trình phát: vuốt lên/xuống để đổi kênh, sang trái để mở danh sách kênh và sang phải để quay lại kênh trước. Tắt nếu bạn chỉ muốn nhấn các phím hướng, tránh chạm lướt vô ý.
+1018|Đổi danh sách phát sẽ thay đổi nội dung ở Trang chủ, Phim lẻ, Phim bộ và Truyền hình.
+1019|Đang chuyển sang hồ sơ %@
+1020|Đang chuyển đến %@
+1021|Đồng bộ
+1022|Đồng bộ hoàn tất
+1023|Đến kỳ đồng bộ
+1024|Đã bật đồng bộ
+1025|Lỗi đồng bộ: %@
+1026|Đồng bộ thất bại
+1027|Đồng bộ ngay
+1028|Đã tắt đồng bộ
+1029|Đồng bộ danh sách phát
+1030|Đồng bộ phim lẻ và tập phim bạn xem lên Simkl, đồng thời hiển thị danh sách xem Simkl trên Trang chủ.
+1031|Đồng bộ phim lẻ và tập phim bạn xem lên Trakt, đồng thời hiển thị danh sách xem Trakt trên Trang chủ.
+1032|Đồng bộ danh sách phát này để tải kênh truyền hình
+1033|Đồng bộ lịch sử xem phim và hiển thị danh sách xem Trakt hoặc Simkl trên Trang chủ.
+1034|Đồng bộ phim đã xem và hiển thị danh sách xem Trakt trên Trang chủ.
+1035|Đồng bộ phim đã xem, hiển thị danh sách xem Trakt hoặc Simkl trên Trang chủ và tải phụ đề cho nội dung chưa có phụ đề.
+1036|Đồng bộ danh sách phát để tải kênh truyền hình
+1037|Đồng bộ danh sách phát để tải phim lẻ
+1038|Đồng bộ danh sách phát để tải phim bộ
+1039|Đã đồng bộ
+1040|Đang đồng bộ
+1041|Đang đồng bộ danh sách phát
+1042|Đang đồng bộ…
+1043|Đồng bộ khi được chọn
+1044|Hệ thống
+1045|Bảng
+1046|Các tab
+1047|Tỷ lệ tắc bóng thành công
+1048|Số pha tắc bóng
+1049|Số lần giành lại bóng
+1050|Chưa xác định
+1051|Đội
+1052|Số lần đội mất bóng
+1053|Đội bóng
+1054|Lỗi kỹ thuật
