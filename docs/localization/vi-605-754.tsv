@@ -1,0 +1,150 @@
+605|Hà Lan
+606|Lỗi mạng: %@
+607|Hết thời gian chờ kết nối
+608|Không bao giờ
+609|Chưa từng đồng bộ
+610|Hồ sơ mới
+611|Mới nhất trước
+612|Kênh tiếp theo
+613|Tập tiếp theo
+614|Tiếp theo:
+615|Tiếp theo: %@
+616|Không có danh mục nào khớp với từ khóa.
+617|Không có kênh
+618|Không có kênh nào khớp với từ khóa.
+619|Không thể kết nối iCloud. Quá trình đồng bộ sẽ tiếp tục khi bạn có mạng.
+620|Chưa có mô tả.
+621|Chưa có nội dung tải xuống
+622|Không có dữ liệu EPG
+623|Chưa có nguồn EPG. Khi thêm danh sách phát, ứng dụng sẽ tự thiết lập nguồn; bạn cũng có thể thêm nguồn XMLTV bên dưới.
+624|Chưa có nguồn EPG. Khi thêm danh sách phát, ứng dụng sẽ tự thiết lập nguồn.
+625|Không có tập phim
+626|Chưa có kênh yêu thích.
+627|Chưa có kênh yêu thích. Hãy đánh dấu các kênh để sắp xếp chúng ở đây.
+628|Chưa có mục yêu thích.
+629|Chưa có mục yêu thích. Hãy đánh dấu kênh, phim lẻ hoặc phim bộ để sắp xếp chúng ở đây.
+630|Không có trận đấu
+631|Không có lịch phát sóng
+632|Chưa đăng nhập iCloud
+633|Không tìm thấy ngôn ngữ
+634|Không có kênh truyền hình
+635|Không có phim lẻ
+636|Không có phim trong danh mục này
+637|Không có phim thuộc thể loại này
+638|Không có danh sách phát
+639|Không có danh sách phát
+640|Chưa có danh sách phát
+641|Chưa có danh sách phát. Hãy thêm nhà cung cấp IPTV để bắt đầu xem.
+642|Chưa chọn ngôn ngữ ưu tiên
+643|Chưa có hồ sơ
+644|Không có chương trình
+645|Không có thông tin chương trình
+646|Chưa có máy chủ ghi hình
+647|Chưa có bản ghi
+648|Không có phim bộ
+649|Không có phim bộ trong danh mục này
+650|Không có phim bộ thuộc thể loại này
+651|Không tìm thấy phụ đề cho nội dung này.
+652|Không có đội bóng
+653|Chưa theo dõi đội bóng nào
+654|Không có
+655|Không khả dụng trên thiết bị này
+656|Chưa kết nối
+657|Không có trong danh sách kênh của bạn
+658|Không quan tâm
+659|Để sau
+660|Chưa ghép nối
+661|Chưa ghi hình
+662|Chưa bắt đầu
+663|Phiên bản Lume này chưa hỗ trợ
+664|Chưa có nội dung
+665|Chưa có mục nào để quản lý. Hãy đồng bộ danh sách phát trước.
+666|ĐANG PHÁT
+667|Tắt
+668|Bắt bóng bật bảng tấn công
+669|Tải xuống để xem ngoại tuyến
+670|Việt vị
+671|OK
+672|Cũ nhất trước
+673|Bật
+674|Đang phát
+675|Trên các kênh của bạn
+676|Trên điện thoại hoặc máy tính, truy cập
+677|Bộ đệm video theo yêu cầu
+678|Mua một lần
+679|Chỉ ghi lại nội dung mà bạn có quyền sử dụng. Bạn có trách nhiệm tuân thủ điều khoản của nhà cung cấp và pháp luật tại nơi mình sinh sống.
+680|Mở chi tiết
+681|Mở simkl.com/pin
+682|Mã nguồn mở
+683|Mở trakt.tv/activate
+684|OpenSubtitles
+685|Không thể kết nối OpenSubtitles (lỗi %lld).
+686|OpenSubtitles trả về dữ liệu không hợp lệ.
+687|Tùy chọn
+688|Bản gốc
+689|Máy chủ khác
+690|Nguồn khác
+691|Hiệp phụ
+692|Hiệp phụ %lld
+693|Phản lưới nhà
+694|Ghép nối
+695|Ghép nối máy chủ ghi hình trong Cài đặt để ghi truyền hình trực tiếp.
+696|Ghép nối lại
+697|Ghép nối máy chủ ghi hình
+698|Máy chủ đã ghép nối
+699|Mã ghép nối
+700|Kiểm soát của phụ huynh
+701|Thuộc %@
+702|Tỷ lệ chuyền bóng chính xác
+703|Đường chuyền
+704|Lượt tấn công mới bằng chuyền bóng
+705|Số yard chuyền bóng
+706|Mật khẩu
+707|Mật khẩu (không bắt buộc)
+708|Mật khẩu hoặc token (không bắt buộc)
+709|Tạm dừng
+710|Đã tạm dừng
+711|Khoản thanh toán được tính vào tài khoản Apple của bạn. Gói đăng ký tự gia hạn nếu không hủy ít nhất 24 giờ trước khi kết thúc kỳ hiện tại. Quản lý hoặc hủy trong phần cài đặt Tài khoản Apple.
+712|Khoản thanh toán được tính vào tài khoản Apple của bạn. Đây là giao dịch mua một lần, không tự gia hạn và không cần hủy.
+713|Có sự cố thanh toán — hãy cập nhật phương thức thanh toán
+714|Lỗi phạt
+715|Số lần phạm lỗi / số yard phạt
+716|Số quả phạt đền đã thực hiện
+717|Bàn thắng từ phạt đền
+718|Số phút phạt
+719|Đá hỏng phạt đền
+720|Cản phá phạt đền
+721|Đá thành công phạt đền
+722|Loạt sút luân lưu
+723|Chọn kênh…
+724|Hình trong hình
+725|Hai mã PIN không khớp. Vui lòng thử lại.
+726|Đang đặt %@. Di chuyển lên hoặc xuống rồi chọn để xác nhận vị trí.
+727|Phát
+728|Phát âm thanh tại đây
+729|Phát M%lld T%lld
+730|Phát lại
+731|Phát không thành công
+732|Trình phát
+733|Các bộ máy phát
+734|Đang phát %@
+735|Danh sách phát
+736|Danh sách phát %@
+737|Thứ tự danh sách phát
+738|Tên danh sách phát
+739|Loại danh sách phát
+740|URL danh sách phát
+741|Danh sách phát: %@
+742|Danh sách phát
+743|Danh sách phát tự làm mới ngầm theo chu kỳ này. Bạn có thể tắt đồng bộ riêng cho từng danh sách trong phần chi tiết.
+744|Danh sách phát tự làm mới ngầm theo chu kỳ này. Bạn có thể tắt đồng bộ riêng cho từng danh sách trong phần chi tiết. Lịch phát sóng có chu kỳ cập nhật riêng.
+745|Plex từ chối tài khoản này. Hãy kiểm tra tên đăng nhập và mật khẩu; nếu bật xác thực hai yếu tố, thêm mã hiện tại vào cuối mật khẩu.
+746|Máy chủ Plex
+747|Điểm ghi trong khu vực dưới rổ
+748|Điểm ghi sau khi đối thủ mất bóng
+749|URL cổng dịch vụ
+750|Bồ Đào Nha
+751|Thời gian kiểm soát bóng
+752|Đã hoãn
+753|Tỷ lệ ghi bàn khi hơn người
+754|Bàn thắng khi hơn người
