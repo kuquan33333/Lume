@@ -13,7 +13,7 @@ import SwiftUI
 extension PremiumManager {
     /// Which plan is unlocking Premium — the headline of the plan details.
     var planTitle: String {
-        #if PRO_TEST
+        #if PRO_TEST && SIDE_LOAD
             if let testPurchasedPlan {
                 return testPurchasedPlan == .monthly
                     ? String(localized: "Monthly (Test)")
@@ -99,7 +99,7 @@ extension SettingsView {
                     if premium.hasManageableSubscription {
                         ManageSubscriptionRow()
                     }
-                    #if PRO_TEST
+                    #if PRO_TEST && SIDE_LOAD
                         Button("Reset Pro Test to Free") { premium.resetTestPlan() }
                         Text("Test build only — no Apple transaction was created.")
                             .font(.caption)
@@ -216,7 +216,7 @@ extension SettingsView {
                     ManageSubscriptionRow()
                         .padding(.horizontal, TVSettingsMetrics.rowHPadding)
                 }
-                #if PRO_TEST
+                #if PRO_TEST && SIDE_LOAD
                     if premium.isPremium {
                         Button("Reset Pro Test to Free") { premium.resetTestPlan() }
                             .buttonStyle(TVSettingsRowButtonStyle())
@@ -237,7 +237,7 @@ extension SettingsView {
                     .buttonStyle(TVSettingsRowButtonStyle())
 
                     Button {
-                        #if PRO_TEST
+                        #if PRO_TEST && SIDE_LOAD
                             premium.restoreTestPlan()
                         #else
                             Task { await premium.restore() }
